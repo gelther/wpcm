@@ -26,15 +26,14 @@ class Manager {
 	 * - mileage-asc
 	 * - mileage-desc
 	 *
-	 * @param array $filters
-	 * @param string $sort
-	 * @param int $per_page
-	 * @param array $extra_args
+	 * @param  array  $filters
+	 * @param  string $sort
+	 * @param  int    $per_page
+	 * @param  array  $extra_args
 	 *
 	 * @return array
 	 */
 	public function get_vehicles( $filters, $sort, $per_page = - 1, $extra_args = array() ) {
-
 		// vehicle array
 		$vehicles = array();
 
@@ -171,7 +170,6 @@ class Manager {
 	 * @return bool
 	 */
 	public function mark_vehicles_expired() {
-
 		$today = new \DateTime();
 		$today->setTime( 0, 0, 0 );
 
@@ -211,6 +209,5 @@ class Manager {
 
 		return true;
 	}
-
 
 }
