@@ -5,14 +5,14 @@ namespace Never5\WPCarManager\Vehicle;
 interface VehicleRepository {
 
 	/**
-	 * @param int $id
+	 * @param  int       $id
 	 *
 	 * @return \stdClass
 	 */
 	public function retrieve( $id );
 
 	/**
-	 * @param Vehicle $vehicle
+	 * @param  Vehicle $vehicle
 	 *
 	 * @return bool
 	 */
