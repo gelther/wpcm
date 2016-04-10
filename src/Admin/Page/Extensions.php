@@ -20,7 +20,6 @@ class Extensions {
 	 * Output page
 	 */
 	public function page_cb() {
-
 		// Allow user to reload extensions
 		if ( isset( $_GET['wpcm-force-recheck'] ) ) {
 			delete_transient( 'wpcm_extension_json' );
@@ -122,7 +121,7 @@ class Extensions {
 						echo '</div>';
 
 
-					} else if ( count( $installed_extensions ) > 0 ) {
+					} elseif ( count( $installed_extensions ) > 0 ) {
 						echo '<div id="available-extensions" class="settings_panel">' . PHP_EOL;
 						echo '<p>Wow, looks like you installed all of our extensions. Thanks, you rock!</p>';
 						echo '</div>';
@@ -169,14 +168,12 @@ class Extensions {
 			?>
 		</div>
 		<?php
-
 	}
 
 	/**
 	 * AJAX license action
 	 */
 	public static function ajax_license_action() {
-
 		// Check nonce
 		check_ajax_referer( 'wpcm-ajax-nonce', 'nonce' );
 
