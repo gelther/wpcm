@@ -13,42 +13,40 @@ class PluginServiceProvider implements Pimple\ServiceProviderInterface {
 	 * @param Pimple\Container $container An Container instance
 	 */
 	public function register( Pimple\Container $container ) {
-
 		// view manager
-		$container['view_manager'] = function ( $c ) {
+		$container['view_manager'] = function( $c ) {
 			return new Admin\ViewManager( $c );
 		};
 
 		// vehicle factory
-		$container['vehicle_repository'] = function () {
+		$container['vehicle_repository'] = function() {
 			return new Vehicle\WordPressRepository();
 		};
 
 		// vehicle factory
-		$container['vehicle_factory'] = function ( $c ) {
+		$container['vehicle_factory'] = function( $c ) {
 			return new Vehicle\VehicleFactory( $c['vehicle_repository'] );
 		};
 
 		// template manger
-		$container['template_manager'] = function () {
+		$container['template_manager'] = function() {
 			return new TemplateManager();
 		};
 
 		// settings
-		$container['settings'] = function () {
+		$container['settings'] = function() {
 			return new Settings();
 		};
 
 		// MakeModelManager
-		$container['make_model_manager'] = function () {
+		$container['make_model_manager'] = function() {
 			return new MakeModelManager();
 		};
 
 		// UserManager
-		$container['user_manager'] = function () {
+		$container['user_manager'] = function() {
 			return new UserManager();
 		};
-
 	}
 
 }
