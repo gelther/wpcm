@@ -20,7 +20,6 @@ class ListingData extends MetaBox {
 	 * @param \WP_Post $post
 	 */
 	public function meta_box_output( $post ) {
-
 		// nonce
 		$this->output_nonce();
 
@@ -46,17 +45,15 @@ class ListingData extends MetaBox {
 				),
 			)
 		) );
-
 	}
 
 	/**
 	 * Triggered on save_post
 	 *
-	 * @param int $post_id
+	 * @param int      $post_id
 	 * @param \WP_Post $post
 	 */
 	public function save_meta_box( $post_id, $post ) {
-
 		// check if we should save
 		if ( true !== $this->should_save( $post ) ) {
 			return;
@@ -74,7 +71,6 @@ class ListingData extends MetaBox {
 			}
 
 		}
-
 	}
 
 }
