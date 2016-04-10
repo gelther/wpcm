@@ -42,7 +42,6 @@ class Manager {
 	 * @param array $extension_slugs
 	 */
 	public function load_extensions( $extension_slugs ) {
-
 		// Check
 		if ( count( $extension_slugs ) > 0 ) {
 
@@ -61,13 +60,12 @@ class Manager {
 			}
 
 		}
-
 	}
 
 	/**
 	 * Get products
 	 *
-	 * @return array<Extension>
+	 * @return array <Extension>
 	 */
 	public function get_extensions() {
 		return $this->extensions;
