@@ -8,24 +8,21 @@ class CustomColumns {
 	 * Setup custom columns
 	 */
 	public function setup() {
-
 		// add custom columns
 		add_filter( 'manage_edit-wpcm_vehicle_columns', array( $this, 'add_columns' ) );
 
 		// custom column data callback
 		add_action( 'manage_wpcm_vehicle_posts_custom_column', array( $this, 'column_data' ), 2 );
-
 	}
 
 	/**
 	 * Add columns
 	 *
-	 * @param array $columns
+	 * @param  array $columns
 	 *
 	 * @return array
 	 */
 	public function add_columns( $columns ) {
-
 		// must be an array
 		if ( ! is_array( $columns ) ) {
 			$columns = array();
@@ -134,6 +131,5 @@ class CustomColumns {
 		// echo val
 		echo $val;
 	}
-
 
 }
