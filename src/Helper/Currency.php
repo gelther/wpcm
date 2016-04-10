@@ -4,7 +4,6 @@ namespace Never5\WPCarManager\Helper;
 /**
  * Class Currency
  * @package Never5\WPCarManager\Helper
- *
  */
 abstract class Currency {
 
@@ -15,12 +14,11 @@ abstract class Currency {
 	 * Forked from WooCommerce's get_woocommerce_currency_symbol():
 	 * https://github.com/woothemes/woocommerce/blob/9e41552342d07796d3ee5cefea76935288b65c6e/includes/wc-core-functions.php#L314
 	 *
-	 * @param string $currency
+	 * @param  string $currency
 	 *
 	 * @return String
 	 */
 	public static function get_currency_symbol( $currency = '' ) {
-
 		// use default currency if currency arg not given
 		if ( ! $currency ) {
 			$currency = wp_car_manager()->service( 'settings' )->get_option( 'currency' );
@@ -167,7 +165,7 @@ abstract class Currency {
 
 	/**
 	 * Return available currencies
-	 * 
+	 *
 	 * @return array
 	 */
 	public static function get_currencies() {
