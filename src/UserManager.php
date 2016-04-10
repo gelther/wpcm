@@ -37,7 +37,6 @@ class UserManager {
 	 * @return bool
 	 */
 	public function can_post_listing() {
-
 		$can_post = true;
 
 		// check if user is logged in
@@ -53,12 +52,11 @@ class UserManager {
 	/**
 	 * Check if current user is allowed to edit given listing
 	 *
-	 * @param int $listing_id
+	 * @param  int  $listing_id
 	 *
 	 * @return bool
 	 */
 	public function can_edit_listing( $listing_id ) {
-
 		$can_edit = true;
 
 		// deny access if user is not logged in or the listing id equals zero
@@ -81,12 +79,11 @@ class UserManager {
 	/**
 	 * Create user account
 	 *
-	 * @param $args
+	 * @param      $args
 	 *
-	 * @return int newly created user ID
+	 * @return int       newly created user ID
 	 */
 	public function create_account( $args ) {
-
 		// defaults
 		$defaults = array(
 			'username' => '',
@@ -170,8 +167,8 @@ class UserManager {
 	/**
 	 * Send new account email
 	 *
-	 * @param int $user_id
-	 * @param string $password
+	 * @param  int    $user_id
+	 * @param  string $password
 	 *
 	 * @return bool
 	 */
@@ -191,7 +188,7 @@ class UserManager {
 	/**
 	 * Login user
 	 *
-	 * @param int $user_id
+	 * @param  int  $user_id
 	 *
 	 * @return bool
 	 */
