@@ -10,7 +10,6 @@ class Pages {
 	 * @return array
 	 */
 	public static function get_pages() {
-
 		// setup array with default option
 		$pages = array(
 			0 => '-- ' . __( 'no page', 'wp-car-manager' ) . ' --'
@@ -48,12 +47,11 @@ class Pages {
 	/**
 	 * Get dashboard page URL
 	 *
-	 * @param int Vehicle ID
+	 * @param  int    Vehicle ID
 	 *
 	 * @return string
 	 */
 	public static function get_page_edit( $vehicle_id ) {
-
 		// get submit url
 		$url = self::get_page_submit();
 
