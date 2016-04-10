@@ -13,7 +13,6 @@ class Upgrade {
 	 * Installation actions
 	 */
 	public function run() {
-
 		// cet current version
 		$current_version = get_option( self::OPTION_CURRENT_VERSION, 0 );
 
@@ -34,7 +33,6 @@ class Upgrade {
 	 * @param float $version
 	 */
 	private function do_upgrade( $version ) {
-
 		// upgrade to 1.2.0
 		if ( version_compare( $version, '1.2.0', '<' ) ) {
 			// register pot type and custom taxonomies
@@ -53,7 +51,6 @@ class Upgrade {
 			// flush rules
 			flush_rewrite_rules();
 		}
-
 	}
 
 	/**
