@@ -107,7 +107,6 @@ class Extension {
 	 * @return String
 	 */
 	public function activate() {
-
 		// Get License
 		$license = $this->get_license();
 
@@ -149,7 +148,7 @@ class Extension {
 
 				// Return Message
 				return array( 'result'  => 'success',
-				              'message' => __( 'License successfully activated.', 'download-monitor' )
+								'message' => __( 'License successfully activated.', 'download-monitor' )
 				);
 
 			} elseif ( $activate_results === false ) {
@@ -174,7 +173,6 @@ class Extension {
 	 * Attempt to deactivate a license
 	 */
 	public function deactivate() {
-
 		// Get License
 		$license = $this->get_license();
 
@@ -214,7 +212,6 @@ class Extension {
 			// Return error message
 			return array( 'result' => 'failed', 'message' => $e->getMessage() );
 		}
-
 	}
 
 	/**
@@ -223,7 +220,6 @@ class Extension {
 	 * @var $check_for_updates_data
 	 */
 	public function check_for_updates( $check_for_updates_data ) {
-
 		// Get license
 		$license = $this->get_license();
 
@@ -285,14 +281,13 @@ class Extension {
 	/**
 	 * Plugins API
 	 *
-	 * @param bool $false
-	 * @param string $action
-	 * @param array $args
+	 * @param  bool   $false
+	 * @param  string $action
+	 * @param  array  $args
 	 *
 	 * @return mixed
 	 */
 	public function plugins_api( $false, $action, $args ) {
-
 		// License
 		$license = $this->get_license();
 
