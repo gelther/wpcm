@@ -9,7 +9,7 @@ class WordPressRepository implements VehicleRepository {
 	/**
 	 * Get a correctly formatted features list
 	 *
-	 * @param int $id
+	 * @param  int   $id
 	 *
 	 * @return array
 	 */
@@ -30,7 +30,7 @@ class WordPressRepository implements VehicleRepository {
 	 *
 	 * @throws \Exception
 	 *
-	 * @return \stdClass();
+	 * @return \stdClass() ;
 	 */
 	public function retrieve( $id ) {
 		$post = get_post( $id );
@@ -77,7 +77,6 @@ class WordPressRepository implements VehicleRepository {
 		$data->gallery_attachment_ids = array_filter( explode( ',', $product_image_gallery ) );
 
 		return $data;
-
 	}
 
 	/**
@@ -90,7 +89,6 @@ class WordPressRepository implements VehicleRepository {
 	 * @return Vehicle $vehicle
 	 */
 	public function persist( $vehicle ) {
-
 		// check if new or existing
 		if ( 0 == $vehicle->get_id() ) {
 
