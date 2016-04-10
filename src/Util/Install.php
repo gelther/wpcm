@@ -11,7 +11,6 @@ class Install {
 	 * Installation actions
 	 */
 	public static function run() {
-
 		// register post type and custom taxonomies
 		Vehicle\PostType::register();
 		WPCarManager\Taxonomies::register_model_make();
@@ -31,4 +30,5 @@ class Install {
 		// set version
 		update_option( Upgrade::OPTION_CURRENT_VERSION, wp_car_manager()->get_version() );
 	}
+
 }
