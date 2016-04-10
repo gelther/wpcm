@@ -19,7 +19,6 @@ class DeleteVehicle extends Ajax {
 	 * @return void
 	 */
 	public function run() {
-
 		// vehicle must be set
 		if ( ! isset( $_POST['vehicle'] ) || empty( $_POST['vehicle'] ) ) {
 			wp_send_json( array( 'success' => false ) );
