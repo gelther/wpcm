@@ -16,12 +16,11 @@ class Dashboard extends Shortcode {
 	}
 
 	/**
-	 * @param array $atts
+	 * @param  array  $atts
 	 *
 	 * @return string
 	 */
 	public function output( $atts ) {
-
 		// JS
 		WPCarManager\Assets::enqueue_shortcode_dashboard();
 
