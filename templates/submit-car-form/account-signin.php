@@ -27,7 +27,7 @@
 
 			<?php if ( $account_creation ) : ?>
 
-				<p><?php _e( 'If you don&rsquo;t have an account you can create one below by entering your email address/username. Your account details will be confirmed via email.', 'wp-car-manager'  ); ?></p>
+				<p><?php _e( 'If you don&rsquo;t have an account you can create one below by entering your email address/username. Your account details will be confirmed via email.', 'wp-car-manager' ); ?></p>
 
 			<?php else : ?>
 
@@ -65,4 +65,4 @@
 	</fieldset>
 <?php endif; ?>
 
-<?php endif; ?>
+<?php endif;
