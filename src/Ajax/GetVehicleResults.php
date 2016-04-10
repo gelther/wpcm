@@ -20,7 +20,6 @@ class GetVehicleResults extends Ajax {
 	 * @return void
 	 */
 	public function run() {
-
 		// check nonce
 		$this->check_nonce();
 
