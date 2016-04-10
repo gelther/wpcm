@@ -4,7 +4,6 @@ namespace Never5\WPCarManager\Helper;
 /**
  * Class Roles
  * @package Never5\WPCarManager\Helper
- *
  */
 abstract class Roles {
 
@@ -14,7 +13,6 @@ abstract class Roles {
 	 * @return array
 	 */
 	public static function get_roles() {
-
 		$roles = array();
 
 		// get WP roles
