@@ -5,7 +5,7 @@
 		<?php wp_nonce_field( 'wpcm_make_nonce_wow_much_security', 'wpcm_make_nonce' ); ?>
 		<input type="hidden" name="term_id" value="<?php echo $item['id']; ?>"/>
 
-		<?php if ( isset( $_GET['make'] ) ): ?>
+		<?php if ( isset( $_GET['make'] ) ) : ?>
 			<input type="hidden" name="make_id" value="<?php echo absint( $_GET['make'] ); ?>"/>
 		<?php endif; ?>
 
