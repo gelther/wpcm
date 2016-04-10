@@ -31,7 +31,7 @@ class File {
 	/**
 	 * Return plugin url
 	 *
-	 * @param string $path
+	 * @param  string $path
 	 *
 	 * @return string
 	 */
@@ -42,7 +42,7 @@ class File {
 	/**
 	 * Return image URL for given image
 	 *
-	 * @param $image
+	 * @param         $image
 	 *
 	 * @return string
 	 */
@@ -58,4 +58,5 @@ class File {
 	public function dirname() {
 		return dirname( plugin_basename( $this->file ) );
 	}
+
 }
