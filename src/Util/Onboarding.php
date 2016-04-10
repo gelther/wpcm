@@ -12,9 +12,8 @@ class Onboarding {
 	 * Setup onboarding
 	 */
 	public function setup() {
-
 		// add page
-		add_action( 'admin_menu', function () {
+		add_action( 'admin_menu', function() {
 			// add page
 			$menu_hook = \add_submenu_page( null, 'WPCM_ONBOARDING', 'WPCM_ONBOARDING', 'edit_posts', 'wpcm_onboarding', array(
 				$this,
@@ -30,14 +29,14 @@ class Onboarding {
 			add_action( 'admin_notices', array( $this, 'add_notice' ) );
 
 			// notice JS -.-
-			add_action( 'in_admin_footer', function () {
+			add_action( 'in_admin_footer', function() {
 				?>
 				<script type="text/javascript">
 					jQuery( function ( $ ) {
 						$( '.wpcm-notice' ).on( 'click', '.notice-dismiss', function ( event ) {
 							$.get( '<?php echo untrailingslashit( site_url( sprintf( '?%s=dismiss_notice', Ajax\Manager::ENDPOINT ) ) ); ?>', {
 								id: $( this ).closest( '.wpcm-notice' ).data( 'id' ),
-								nonce: '<?php echo wp_create_nonce( 'wpcm_ajax_nonce_dismiss_notice' ) ?>'
+								nonce: '<?php echo wp_create_nonce( 'wpcm_ajax_nonce_dismiss_notice' ); ?>'
 							}, function () {
 							} );
 						} );
@@ -46,7 +45,6 @@ class Onboarding {
 				<?php
 			} );
 		}
-
 	}
 
 	/**
@@ -84,7 +82,6 @@ class Onboarding {
 	 * Onboarding page
 	 */
 	public function page() {
-
 		// been there, done that
 		update_option( 'wpcm_notice_onboarding', 1 );
 
@@ -143,10 +140,11 @@ class Onboarding {
 
 				<p><?php printf( __( 'At %sNever5%s we create high quality premium WordPress plugins, with extensive support. We offer solutions in related posts, advanced download management, vehicle management and connecting post types.', 'wp-car-manager' ), '<a href="http://www.never5.com" target="_blank">', '</a>' ); ?></p>
 
-				<p><?php printf( __( "%sFollow Never5 on Twitter%s", 'wp-car-manager' ), '<a href="https://twitter.com/Never5Plugins" target="_blank">', '</a>' ); ?></p>
+				<p><?php printf( __( '%sFollow Never5 on Twitter%s', 'wp-car-manager' ), '<a href="https://twitter.com/Never5Plugins" target="_blank">', '</a>' ); ?></p>
 
 			</fieldset>
 		</div>
 		<?php
 	}
+
 }
