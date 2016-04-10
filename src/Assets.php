@@ -9,7 +9,6 @@ abstract class Assets {
 	 * Enqueue frontend assets
 	 */
 	public static function enqueue_frontend() {
-
 		// frontend CSS
 		wp_enqueue_style(
 			'wpcm_css_frontend',
@@ -32,14 +31,12 @@ abstract class Assets {
 			// do action wpcm_assets_frontend_vehicle_single
 			do_action( 'wpcm_assets_frontend_vehicle_single' );
 		}
-
 	}
 
 	/**
 	 * Enqueue shortcode related Js
 	 */
 	public static function enqueue_shortcode_cars() {
-
 		if ( in_array( 'cars', self::$shortcode_assets_enqueued ) ) {
 			return;
 		}
@@ -74,14 +71,12 @@ abstract class Assets {
 
 		// do action wpcm_assets_frontend_vehicle_single
 		do_action( 'wpcm_assets_frontend_vehicle_listings_page' );
-
 	}
 
 	/**
 	 * Enqueue shortcode related Js
 	 */
 	public static function enqueue_shortcode_submit_car_form() {
-
 		if ( in_array( 'submit_car_form', self::$shortcode_assets_enqueued ) ) {
 			return;
 		}
@@ -134,14 +129,12 @@ abstract class Assets {
 
 		// do action wpcm_assets_frontend_car_submission
 		do_action( 'wpcm_assets_frontend_car_submission_page' );
-
 	}
 
 	/**
 	 * Enqueue shortcode related Js
 	 */
 	public static function enqueue_shortcode_dashboard() {
-
 		if ( in_array( 'dashboard', self::$shortcode_assets_enqueued ) ) {
 			return;
 		}
@@ -169,7 +162,6 @@ abstract class Assets {
 
 		// do action wpcm_assets_frontend_vehicle_single
 		do_action( 'wpcm_assets_frontend_dashboard_page' );
-
 	}
 
 	/**
@@ -239,7 +231,6 @@ abstract class Assets {
 			array(),
 			wp_car_manager()->get_version()
 		);
-
 	}
 
 }
