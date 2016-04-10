@@ -7,7 +7,6 @@ class PostType {
 	const VEHICLE = 'wpcm_vehicle';
 
 	public static function register() {
-
 		$labels = array(
 			'name'               => _x( 'Car Listings', 'Post Type General Name', 'wp-car-manager' ),
 			'singular_name'      => _x( 'Car', 'Post Type Singular Name', 'wp-car-manager' ),
