@@ -78,7 +78,7 @@ class Makes {
 					break;
 			}
 
-		} else if ( isset( $_GET['action'] ) ) {
+		} elseif ( isset( $_GET['action'] ) ) {
 			if ( 'delete' === $_GET['action'] ) {
 				// check if nonce exists
 				if ( ! isset( $_GET['wpcm_nonce'] ) ) {
@@ -120,7 +120,6 @@ class Makes {
 	 * Load the correct view
 	 */
 	private function load_view() {
-
 		// check if we're editing a page
 		if ( isset( $_GET['edit'] ) ) {
 
@@ -164,14 +163,12 @@ class Makes {
 				'items' => wp_car_manager()->service( 'make_model_manager' )->get_makes(),
 			) );
 		}
-
 	}
 
 	/**
 	 * Output page
 	 */
 	public function page_cb() {
-
 		// handle post
 		$this->handle_action();
 
