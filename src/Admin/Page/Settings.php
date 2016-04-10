@@ -18,10 +18,9 @@ class Settings {
 	 * Output page
 	 */
 	public function page_cb() {
-
 		// load view
 		wp_car_manager()->service( 'view_manager' )->display( 'page/settings', array(
-			'fields' => wp_car_manager()->service('settings')->get_fields()
+			'fields' => wp_car_manager()->service( 'settings' )->get_fields()
 		) );
 	}
 
