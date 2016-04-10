@@ -40,9 +40,9 @@ class TemplateManager {
 	/**
 	 * Filter post class
 	 *
-	 * @param array $classes
-	 * @param string $class
-	 * @param string $post_id
+	 * @param  array  $classes
+	 * @param  string $class
+	 * @param  string $post_id
 	 *
 	 * @return array
 	 */
@@ -61,7 +61,7 @@ class TemplateManager {
 	/**
 	 * Inject vehicle singular content into singular page
 	 *
-	 * @param string $content
+	 * @param  string $content
 	 *
 	 * @return string
 	 */
@@ -112,11 +112,10 @@ class TemplateManager {
 	 *
 	 * @param string $slug
 	 * @param string $name
-	 * @param array $args
+	 * @param array  $args
 	 * @param string $custom_dir
 	 *
 	 * @parem string $custom_dir
-	 *
 	 */
 	public function get_template_part( $slug, $name = '', $args = array(), $custom_dir = '' ) {
 		$template = '';
