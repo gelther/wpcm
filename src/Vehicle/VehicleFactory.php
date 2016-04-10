@@ -17,12 +17,11 @@ class VehicleFactory {
 	/**
 	 * Create Vehicle
 	 *
-	 * @param int $id
+	 * @param  int     $id
 	 *
 	 * @return Vehicle
 	 */
 	public function make( $id = 0 ) {
-
 		// absint
 		$id = absint( $id );
 
@@ -65,4 +64,5 @@ class VehicleFactory {
 
 		return $vehicle;
 	}
+
 }
