@@ -19,7 +19,6 @@ class DismissNotice extends Ajax {
 	 * @return void
 	 */
 	public function run() {
-
 		// check nonce
 		$this->check_nonce();
 
@@ -42,7 +41,7 @@ class DismissNotice extends Ajax {
 		}
 
 		// set notice option
-		update_option( 'wpcm_notice_'.$notice_id, 1 );
+		update_option( 'wpcm_notice_' . $notice_id, 1 );
 
 		// done
 		wp_send_json( array( 'success' => true ) );
