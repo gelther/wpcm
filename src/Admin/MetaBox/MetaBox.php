@@ -28,7 +28,6 @@ abstract class MetaBox implements iMetaBox {
 	 * Setup meta box
 	 */
 	public function init() {
-
 		// only continue if the meta box has an id
 		if ( '' === $this->id ) {
 			return;
@@ -77,9 +76,8 @@ abstract class MetaBox implements iMetaBox {
 	 * @return bool
 	 */
 	protected function check_nonce() {
-
 		// nonce check
-		if ( isset( $_POST[$this->get_nonce_key()] ) && wp_verify_nonce( $_POST[ $this->get_nonce_key() ], $this->get_nonce_action() ) ) {
+		if ( isset( $_POST[ $this->get_nonce_key() ] ) && wp_verify_nonce( $_POST[ $this->get_nonce_key() ], $this->get_nonce_action() ) ) {
 			return true;
 		}
 
@@ -89,7 +87,7 @@ abstract class MetaBox implements iMetaBox {
 	/**
 	 * Check if we should save meta data
 	 *
-	 * @param \WP_Post $post
+	 * @param  \WP_Post $post
 	 *
 	 * @return bool
 	 */
