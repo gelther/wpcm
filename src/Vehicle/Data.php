@@ -9,12 +9,11 @@ class Data {
 	/**
 	 * Get Vehicle fields
 	 *
-	 * @param string $type Not used at the moment, but will be used when more than 1 vehicle type is offered
+	 * @param  string $type Not used at the moment, but will be used when more than 1 vehicle type is offered
 	 *
 	 * @return array
 	 */
 	public static function get_fields( $type = 'car' ) {
-
 		return array(
 			'condition'    => array(
 				'type'     => 'select',
@@ -130,13 +129,12 @@ class Data {
 	/**
 	 * Remove fields that have no value data
 	 *
-	 * @param array $fields
-	 * @param Vehicle $vehicle
+	 * @param  array   $fields
+	 * @param  Vehicle $vehicle
 	 *
 	 * @return array
 	 */
 	public static function remove_empty_fields( $fields, $vehicle ) {
-
 		foreach ( $fields as $field_key => $field ) {
 			$data_method = 'get_' . $field;
 			if ( method_exists( $vehicle, $data_method ) ) {
@@ -149,4 +147,5 @@ class Data {
 
 		return $fields;
 	}
+
 }
