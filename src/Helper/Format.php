@@ -9,13 +9,12 @@ abstract class Format {
 	/**
 	 * Format price
 	 *
-	 * @param float $price
-	 * @param array $args
+	 * @param  float  $price
+	 * @param  array  $args
 	 *
 	 * @return string
 	 */
 	public static function price( $price, $args = array() ) {
-
 		/** @var Plugin $wpcm */
 		$wpcm = wp_car_manager();
 
@@ -56,7 +55,7 @@ abstract class Format {
 	/**
 	 * Formats mileage
 	 *
-	 * @param $mileage
+	 * @param         $mileage
 	 *
 	 * @return string
 	 */
