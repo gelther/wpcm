@@ -16,12 +16,11 @@ class SubmitCarForm extends Shortcode {
 	}
 
 	/**
-	 * @param array $atts
+	 * @param  array  $atts
 	 *
 	 * @return string
 	 */
 	public function output( $atts ) {
-
 		// JS
 		WPCarManager\Assets::enqueue_shortcode_submit_car_form();
 
