@@ -28,7 +28,6 @@ class Manager {
 	 * Add AJAX actions
 	 */
 	private function add_ajax_actions() {
-
 		// register GetVehicleResults
 		$get_vehicle_results = new GetVehicleResults();
 		$get_vehicle_results->register();
