@@ -11,7 +11,6 @@ class Cars extends Shortcode {
 	 * Constructor
 	 */
 	public function __construct() {
-
 		// parent constructor
 		parent::__construct( 'cars' );
 
@@ -27,12 +26,11 @@ class Cars extends Shortcode {
 	}
 
 	/**
-	 * @param array $atts
+	 * @param  array  $atts
 	 *
 	 * @return string
 	 */
 	public function output( $atts ) {
-
 		// JS
 		WPCarManager\Assets::enqueue_shortcode_cars();
 
