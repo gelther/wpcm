@@ -41,7 +41,7 @@ add_action( 'wpcm_vehicle_content', 'wpcm_template_single_content', 20 );
 add_action( 'wpcm_vehicle_content', 'wpcm_template_single_features', 30 );
 
 /**
- ************************ LISTINGS ************************
+ * *********************** LISTINGS ************************
  */
 
 add_action( 'wpcm_listings_vehicle_sort', 'wpcm_template_vehicle_listings_sort', 10 );
@@ -69,7 +69,7 @@ add_action( 'wpcm_listings_vehicle_results', 'wpcm_template_vehicle_listings_end
 
 
 /**
- ************************ CAR SUBMISSION ************************
+ * *********************** CAR SUBMISSION ************************
  */
 
 add_action( 'wpcm_submit_car_form_login', 'wpcm_template_submit_car_form_fields_account_signin', 15 );
@@ -83,7 +83,7 @@ add_action( 'wpcm_submit_car_form_fields', 'wpcm_template_submit_car_form_fields
 add_action( 'wpcm_submit_car_form_disabled', 'wpcm_template_submit_car_form_disabled', 15 );
 
 /**
- ************************ DASHBOARD ************************
+ * *********************** DASHBOARD ************************
  */
 
 /**
