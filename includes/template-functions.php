@@ -104,7 +104,6 @@ if ( ! function_exists( 'wpcm_template_vehicle_listings_filters_nonce' ) ) {
 
 if ( ! function_exists( 'wpcm_template_vehicle_listings_filters_make' ) ) {
 	function wpcm_template_vehicle_listings_filters_make( $atts ) {
-
 		// fetch all makes if make attr is empty
 		if ( empty( $atts['make'] ) ) {
 			$makes = wp_car_manager()->service( 'make_model_manager' )->get_makes_map();
@@ -164,7 +163,7 @@ if ( ! function_exists( 'wpcm_template_vehicle_listings_end' ) ) {
 }
 
 /**
- ************************ CAR SUBMISSION ************************
+ * *********************** CAR SUBMISSION ************************
  */
 if ( ! function_exists( 'wpcm_template_submit_car_form_fields_account_signin' ) ) {
 	function wpcm_template_submit_car_form_fields_account_signin() {
@@ -217,7 +216,6 @@ if ( ! function_exists( 'wpcm_template_submit_car_form_fields_car_description' )
 
 if ( ! function_exists( 'wpcm_template_submit_car_form_fields_car_data' ) ) {
 	function wpcm_template_submit_car_form_fields_car_data( $vehicle ) {
-
 		// get fields
 		$fields = Never5\WPCarManager\Vehicle\Data::get_fields();
 
@@ -273,8 +271,6 @@ if ( ! function_exists( 'wpcm_template_submit_car_form_fields_car_data' ) ) {
 
 if ( ! function_exists( 'wpcm_template_submit_car_form_fields_car_features' ) ) {
 	function wpcm_template_submit_car_form_fields_car_features( $vehicle ) {
-
-
 		// get features
 		$features = apply_filters( 'wpcm_submit_car_form_features', get_terms( \Never5\WPCarManager\Taxonomies::FEATURES, array(
 			'hide_empty' => false
@@ -314,7 +310,7 @@ if ( ! function_exists( 'wpcm_template_submit_car_form_disabled' ) ) {
 }
 
 /**
- ************************ DASHBOARD ************************
+ * *********************** DASHBOARD ************************
  */
 
 if ( ! function_exists( 'wpcm_template_dashboard_list_start' ) ) {
