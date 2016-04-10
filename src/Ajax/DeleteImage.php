@@ -19,7 +19,6 @@ class DeleteImage extends Ajax {
 	 * @return void
 	 */
 	public function run() {
-
 		// vehicle must be set
 		if ( ! isset( $_POST['vehicle'] ) || empty( $_POST['vehicle'] ) ) {
 			wp_send_json( array( 'success' => false ) );
@@ -79,7 +78,7 @@ class DeleteImage extends Ajax {
 				wp_car_manager()->service( 'vehicle_repository' )->persist( $vehicle );
 			}
 
-		} else if ( ( $attachment_key = array_search( $image_id, $attachment_ids ) ) !== false ) {
+		} elseif ( ( $attachment_key = array_search( $image_id, $attachment_ids ) ) !== false ) {
 			// if not the image should be an attachment id but just checking to be absolutely sure
 
 			// remove image from local array
