@@ -19,7 +19,6 @@ class SaveVehicle extends Ajax {
 	 * @return void
 	 */
 	public function run() {
-
 		// return fields
 		$return = array( 'success' => false, 'errors' => array(), 'vehicle' => 0 );
 
