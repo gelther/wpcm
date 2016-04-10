@@ -30,7 +30,6 @@ class License {
 	 * @param String $extension_slug
 	 */
 	public function __construct( $extension_slug ) {
-
 		// Set Product ID
 		$this->extension_slug = $extension_slug;
 
