@@ -31,4 +31,5 @@ class Install {
 		// set version
 		update_option( Upgrade::OPTION_CURRENT_VERSION, wp_car_manager()->get_version() );
 	}
+
 }
