@@ -48,7 +48,7 @@ class Pages {
 	/**
 	 * Get dashboard page URL
 	 *
-	 * @param int Vehicle ID
+	 * @param  int    Vehicle ID
 	 *
 	 * @return string
 	 */
