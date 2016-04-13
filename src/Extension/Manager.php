@@ -61,13 +61,12 @@ class Manager {
 			}
 
 		}
-
 	}
 
 	/**
 	 * Get products
 	 *
-	 * @return array<Extension>
+	 * @return array <Extension>
 	 */
 	public function get_extensions() {
 		return $this->extensions;
