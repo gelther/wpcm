@@ -53,7 +53,6 @@ class Upgrade {
 			// flush rules
 			flush_rewrite_rules();
 		}
-
 	}
 
 	/**
