@@ -25,7 +25,7 @@ final class Plugin extends Pimple\Container {
 		parent::__construct();
 
 		// register file service
-		$this['file'] = function () use ( $file ) {
+		$this['file'] = function() use ( $file ) {
 			return new File( $file );
 		};
 
@@ -56,7 +56,7 @@ final class Plugin extends Pimple\Container {
 	/**
 	 * Get service
 	 *
-	 * @param String $key
+	 * @param  String $key
 	 *
 	 * @return mixed
 	 */
@@ -74,14 +74,14 @@ final class Plugin extends Pimple\Container {
 		load_plugin_textdomain( 'wp-car-manager', false, $container['file']->dirname() . '/languages/' );
 
 		// register post type & taxonomies
-		add_action( 'init', function () {
+		add_action( 'init', function() {
 			Vehicle\PostType::register();
 			Taxonomies::register_model_make();
 			Taxonomies::register_features();
 		} );
 
 		// register image sizes
-		add_action( 'init', function () {
+		add_action( 'init', function() {
 			add_image_size( 'wpcm_vehicle_single', 600, 400, true );
 			add_image_size( 'wpcm_vehicle_thumbnail', 150, 150, true );
 			add_image_size( 'wpcm_vehicle_listings_item', 100, 100, true );
@@ -92,7 +92,7 @@ final class Plugin extends Pimple\Container {
 		$post_status->setup();
 
 		// expiration cron-job callback
-		add_action( 'wpcm_crob_set_expired', function () {
+		add_action( 'wpcm_crob_set_expired', function() {
 			$manager = new Vehicle\Manager();
 			$manager->mark_vehicles_expired();
 		} );
@@ -100,7 +100,7 @@ final class Plugin extends Pimple\Container {
 		if ( is_admin() ) {
 
 			// add admin menu
-			add_action( 'admin_menu', function () {
+			add_action( 'admin_menu', function() {
 
 				// admin page Makes
 				$page_makes = new Admin\Page\Makes();
@@ -112,7 +112,7 @@ final class Plugin extends Pimple\Container {
 			} );
 
 			// add extensions page
-			add_action( 'admin_menu', function () {
+			add_action( 'admin_menu', function() {
 				$page_extensions = new Admin\Page\Extensions();
 				$page_extensions->init();
 			}, 20 );
@@ -124,7 +124,7 @@ final class Plugin extends Pimple\Container {
 			) );
 
 			// add meta box
-			add_action( 'admin_init', function () {
+			add_action( 'admin_init', function() {
 
 				// listing data
 				$listing_data = new Admin\MetaBox\ListingData();
@@ -147,7 +147,7 @@ final class Plugin extends Pimple\Container {
 			} );
 
 			// admin settings
-			add_action( 'admin_init', function () use ( $container ) {
+			add_action( 'admin_init', function() use ( $container ) {
 				$container['settings']->register_settings();
 			} );
 
@@ -163,7 +163,7 @@ final class Plugin extends Pimple\Container {
 			$custom_actions->listen();
 
 			// upgrade manager
-			add_action( 'admin_init', function () {
+			add_action( 'admin_init', function() {
 				$upgrade_manager = new Util\Upgrade();
 				$upgrade_manager->run();
 			} );
@@ -183,7 +183,7 @@ final class Plugin extends Pimple\Container {
 			$rewrites->maybe_flush();
 
 			// load extensions
-			add_action( 'admin_init', function () {
+			add_action( 'admin_init', function() {
 				// Load the registered extensions
 				$registered_extensions = apply_filters( 'wpcm_extensions', array() );
 				// Check if we've got extensions
@@ -209,7 +209,7 @@ final class Plugin extends Pimple\Container {
 			add_action( 'wp_enqueue_scripts', array( 'Never5\\WPCarManager\\Assets', 'enqueue_frontend' ) );
 
 			// setup shortcode
-			add_action( 'init', function () use ( $container ) {
+			add_action( 'init', function() use ( $container ) {
 				$shortcode_cars            = new Shortcode\Cars();
 				$shortcode_submit_car_form = new Shortcode\SubmitCarForm();
 				$shortcode_dashboard       = new Shortcode\Dashboard();
@@ -219,7 +219,6 @@ final class Plugin extends Pimple\Container {
 			$ajax_manager = new Ajax\Manager();
 			$ajax_manager->setup();
 		}
-
 	}
 
 }
