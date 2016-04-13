@@ -53,7 +53,7 @@ class UserManager {
 	/**
 	 * Check if current user is allowed to edit given listing
 	 *
-	 * @param int $listing_id
+	 * @param  int  $listing_id
 	 *
 	 * @return bool
 	 */
@@ -81,9 +81,9 @@ class UserManager {
 	/**
 	 * Create user account
 	 *
-	 * @param $args
+	 * @param      $args
 	 *
-	 * @return int newly created user ID
+	 * @return int       newly created user ID
 	 */
 	public function create_account( $args ) {
 
@@ -170,8 +170,8 @@ class UserManager {
 	/**
 	 * Send new account email
 	 *
-	 * @param int $user_id
-	 * @param string $password
+	 * @param  int    $user_id
+	 * @param  string $password
 	 *
 	 * @return bool
 	 */
@@ -191,7 +191,7 @@ class UserManager {
 	/**
 	 * Login user
 	 *
-	 * @param int $user_id
+	 * @param  int  $user_id
 	 *
 	 * @return bool
 	 */
