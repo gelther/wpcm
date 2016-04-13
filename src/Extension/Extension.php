@@ -149,7 +149,7 @@ class Extension {
 
 				// Return Message
 				return array( 'result'  => 'success',
-				              'message' => __( 'License successfully activated.', 'download-monitor' )
+								'message' => __( 'License successfully activated.', 'download-monitor' )
 				);
 
 			} elseif ( $activate_results === false ) {
@@ -214,7 +214,6 @@ class Extension {
 			// Return error message
 			return array( 'result' => 'failed', 'message' => $e->getMessage() );
 		}
-
 	}
 
 	/**
@@ -285,9 +284,9 @@ class Extension {
 	/**
 	 * Plugins API
 	 *
-	 * @param bool $false
-	 * @param string $action
-	 * @param array $args
+	 * @param  bool   $false
+	 * @param  string $action
+	 * @param  array  $args
 	 *
 	 * @return mixed
 	 */
