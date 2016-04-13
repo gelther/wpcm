@@ -7,7 +7,7 @@ class MakeModelManager {
 	/**
 	 * Get make by ID
 	 *
-	 * @param int $make_id
+	 * @param  int   $make_id
 	 *
 	 * @return array
 	 */
@@ -70,7 +70,7 @@ class MakeModelManager {
 	 * @return array
 	 */
 	public function get_makes_map() {
-		$makes        = $this->get_makes();
+		$makes     = $this->get_makes();
 		$makes_map = array( 0 => __( 'Select Make', 'wp-car-manager' ) );
 		if ( count( $makes ) > 0 ) {
 			foreach ( $makes as $make ) {
@@ -83,7 +83,7 @@ class MakeModelManager {
 	/**
 	 * Get model by ID
 	 *
-	 * @param int $model_id
+	 * @param  int   $model_id
 	 *
 	 * @return array
 	 */
@@ -108,7 +108,7 @@ class MakeModelManager {
 	/**
 	 * Get models of make
 	 *
-	 * @param int $make_id
+	 * @param  int   $make_id
 	 *
 	 * @return array
 	 */
