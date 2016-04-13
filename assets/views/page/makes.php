@@ -21,8 +21,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 					</thead>
 
 					<tbody id="the-list" data-wp-lists="list:tag">
-					<?php if ( count( $items ) > 0 ): ?>
-						<?php foreach ( $items as $item ): ?>
+					<?php if ( count( $items ) > 0 ) : ?>
+						<?php foreach ( $items as $item ) : ?>
 							<tr>
 								<td class="name column-name">
 									<strong><a class="row-title"
@@ -71,7 +71,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<h3><?php _e( 'Add New Make', 'wp-car-manager' ); ?></h3>
 
 					<form id="add-make" method="post"
-					      action="<?php echo admin_url( 'edit.php?post_type=wpcm_vehicle&page=wpcm-makes' ) ?>">
+					      action="<?php echo admin_url( 'edit.php?post_type=wpcm_vehicle&page=wpcm-makes' ); ?>">
 
 						<?php wp_nonce_field( 'wpcm_make_nonce_wow_much_security', 'wpcm_make_nonce' ); ?>
 
