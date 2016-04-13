@@ -49,14 +49,12 @@ class CarData extends MetaBox {
 				) );
 			}
 		}
-
-
 	}
 
 	/**
 	 * Triggered on save_post
 	 *
-	 * @param int $post_id
+	 * @param int      $post_id
 	 * @param \WP_Post $post
 	 */
 	public function save_meta_box( $post_id, $post ) {
@@ -75,7 +73,6 @@ class CarData extends MetaBox {
 				}
 			}
 		}
-
 	}
 
 	/**
