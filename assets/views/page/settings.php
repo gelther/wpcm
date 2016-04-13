@@ -48,7 +48,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 				// switch type
 				switch ( $option['type'] ) {
-					case "checkbox" :
+					case 'checkbox' :
 						?><label><input id="setting-<?php echo $option['name']; ?>"
 						                name="wpcm_<?php echo $option['name']; ?>" type="checkbox"
 						                value="1" <?php checked( '1', $value ); ?> /> <?php echo $option['cb_label']; ?>
@@ -57,7 +57,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 							echo ' <p class="wpcm-description">' . $option['desc'] . '</p>';
 						}
 						break;
-					case "textarea" :
+					case 'textarea' :
 						?><textarea id="setting-<?php echo $option['name']; ?>" class="large-text" cols="50"
 						            rows="3"
 						            name="wpcm_<?php echo $option['name']; ?>" <?php echo $placeholder; ?>><?php echo esc_textarea( $value ); ?></textarea><?php
@@ -65,7 +65,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 							echo ' <p class="wpcm-description">' . $option['desc'] . '</p>';
 						}
 						break;
-					case "select" :
+					case 'select' :
 						?><select id="setting-<?php echo $option['name']; ?>" class="regular-text"
 						          name="wpcm_<?php echo $option['name']; ?>"><?php
 						foreach ( $option['options'] as $key => $name ) {
