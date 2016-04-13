@@ -78,7 +78,7 @@ class Makes {
 					break;
 			}
 
-		} else if ( isset( $_GET['action'] ) ) {
+		} elseif ( isset( $_GET['action'] ) ) {
 			if ( 'delete' === $_GET['action'] ) {
 				// check if nonce exists
 				if ( ! isset( $_GET['wpcm_nonce'] ) ) {
@@ -164,7 +164,6 @@ class Makes {
 				'items' => wp_car_manager()->service( 'make_model_manager' )->get_makes(),
 			) );
 		}
-
 	}
 
 	/**
