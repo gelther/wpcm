@@ -55,4 +55,4 @@ do_action( 'wpcm_before_single_vehicle' );
 
 	<meta itemprop="url" content="<?php the_permalink(); ?>"/>
 
-<?php do_action( 'wpcm_after_single_vehicle' ); ?>
+<?php do_action( 'wpcm_after_single_vehicle' );
