@@ -25,7 +25,6 @@ class PostStatus {
 		add_action( 'admin_footer-post.php', array( $this, 'append_to_post_status_list' ) );
 	}
 
-
 	/**
 	 * Register Post Statuses
 	 */
@@ -51,8 +50,6 @@ class PostStatus {
 			'show_in_admin_status_list' => true,
 			'label_count'               => _n_noop( 'Expired <span class="count">(%s)</span>', 'Expired <span class="count">(%s)</span>', 'wp-car-manager' ),
 		) );
-
-
 	}
 
 	/**
@@ -101,10 +98,9 @@ class PostStatus {
 	}
 
 	/**
-	 *
 	 * Catch the pre post
 	 *
-	 * @param $query
+	 * @param        $query
 	 *
 	 * @return mixed
 	 */
@@ -164,8 +160,8 @@ class PostStatus {
 	/**
 	 * Catch first publish of car-lister created listings and set an expiration date
 	 *
-	 * @param string $new_status
-	 * @param string $old_status
+	 * @param string   $new_status
+	 * @param string   $old_status
 	 * @param \WP_Post $post
 	 */
 	public function set_expiration_on_first_publish( $new_status, $old_status, $post ) {
@@ -235,7 +231,7 @@ class PostStatus {
 				foreach ( $post_status_arr as $ps_key => $ps_val ) {
 
 					// add script to $script
-					$script .= "$('select#post_status').append(\"<option value='" . $ps_key . "'" . selected( $ps_key, $post->post_status, false ) . ">" . $ps_val . "</option>\");";
+					$script .= "$('select#post_status').append(\"<option value='" . $ps_key . "'" . selected( $ps_key, $post->post_status, false ) . '>' . $ps_val . "</option>\");";
 
 					if ( $post->post_status == $ps_key ) {
 						$script .= "$('#post-status-display').html('" . $ps_val . "');";
@@ -246,7 +242,7 @@ class PostStatus {
 
 			// print script
 			if ( ! empty( $script ) ) {
-				echo "<script type='text/javascript'>jQuery(document).ready(function($){" . $script . "});</script>";
+				echo "<script type='text/javascript'>jQuery(document).ready(function($){" . $script . '});</script>';
 			}
 
 		}
