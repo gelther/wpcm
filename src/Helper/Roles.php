@@ -4,7 +4,6 @@ namespace Never5\WPCarManager\Helper;
 /**
  * Class Roles
  * @package Never5\WPCarManager\Helper
- *
  */
 abstract class Roles {
 
