@@ -26,10 +26,10 @@ class Manager {
 	 * - mileage-asc
 	 * - mileage-desc
 	 *
-	 * @param array $filters
-	 * @param string $sort
-	 * @param int $per_page
-	 * @param array $extra_args
+	 * @param  array  $filters
+	 * @param  string $sort
+	 * @param  int    $per_page
+	 * @param  array  $extra_args
 	 *
 	 * @return array
 	 */
@@ -211,6 +211,5 @@ class Manager {
 
 		return true;
 	}
-
 
 }
