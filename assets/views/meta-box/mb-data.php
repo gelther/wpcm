@@ -35,4 +35,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<?php endforeach; ?>
 	</table>
-<?php endif; ?>
+<?php endif;
