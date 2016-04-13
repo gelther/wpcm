@@ -32,7 +32,6 @@ abstract class Assets {
 			// do action wpcm_assets_frontend_vehicle_single
 			do_action( 'wpcm_assets_frontend_vehicle_single' );
 		}
-
 	}
 
 	/**
@@ -74,7 +73,6 @@ abstract class Assets {
 
 		// do action wpcm_assets_frontend_vehicle_single
 		do_action( 'wpcm_assets_frontend_vehicle_listings_page' );
-
 	}
 
 	/**
@@ -134,7 +132,6 @@ abstract class Assets {
 
 		// do action wpcm_assets_frontend_car_submission
 		do_action( 'wpcm_assets_frontend_car_submission_page' );
-
 	}
 
 	/**
@@ -169,7 +166,6 @@ abstract class Assets {
 
 		// do action wpcm_assets_frontend_vehicle_single
 		do_action( 'wpcm_assets_frontend_dashboard_page' );
-
 	}
 
 	/**
@@ -239,7 +235,6 @@ abstract class Assets {
 			array(),
 			wp_car_manager()->get_version()
 		);
-
 	}
 
 }
