@@ -97,4 +97,5 @@ abstract class MotorVehicle extends Vehicle {
 	public function set_engine( $engine ) {
 		$this->engine = $engine;
 	}
+
 }
