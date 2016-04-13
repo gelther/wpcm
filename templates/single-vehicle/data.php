@@ -10,7 +10,7 @@ global $vehicle;
 	<?php
 
 	// get fields
-	$fields = Never5\WPCarManager\Vehicle\Data::remove_empty_fields( array_map( function ( $f ) {
+	$fields = Never5\WPCarManager\Vehicle\Data::remove_empty_fields( array_map( function( $f ) {
 		return $f['key'];
 	}, Never5\WPCarManager\Vehicle\Data::get_fields() ), $vehicle );
 
