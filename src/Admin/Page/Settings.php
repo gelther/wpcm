@@ -21,7 +21,7 @@ class Settings {
 
 		// load view
 		wp_car_manager()->service( 'view_manager' )->display( 'page/settings', array(
-			'fields' => wp_car_manager()->service('settings')->get_fields()
+			'fields' => wp_car_manager()->service( 'settings' )->get_fields()
 		) );
 	}
 
