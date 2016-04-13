@@ -4,7 +4,6 @@ namespace Never5\WPCarManager\Helper;
 /**
  * Class Date
  * @package Never5\WPCarManager\Helper
- *
  */
 abstract class Date {
 
@@ -14,8 +13,7 @@ abstract class Date {
 	 * @return String
 	 */
 	public static function get_date_format() {
-		return apply_filters( 'wpcm_date_format', wp_car_manager()->service('settings')->get_option('date_format') );
+		return apply_filters( 'wpcm_date_format', wp_car_manager()->service( 'settings' )->get_option( 'date_format' ) );
 	}
-
 
 }
