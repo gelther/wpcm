@@ -2,7 +2,7 @@
 <fieldset class="wpcm-fieldset-features">
 	<div class="wpcm-field wpcm-field-fw">
 		<ul class="wpcm-form-features">
-			<?php foreach ( $features as $feature ): ?>
+			<?php foreach ( $features as $feature ) : ?>
 				<?php $checked = ( ( in_array( $feature->term_id, $vehicle_features ) ) ? ' checked="checked"' : '' ); ?>
 				<li>
 					<label for="wpcm-form-<?php esc_attr_e( $feature->slug ); ?>">
