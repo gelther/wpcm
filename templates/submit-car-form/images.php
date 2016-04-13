@@ -17,7 +17,7 @@
 		$attachment_ids = array_merge( $attachment_ids, $vehicle->get_gallery_attachment_ids() );
 	}
 
-	if ( count( $attachment_ids ) > 0 ):
+	if ( count( $attachment_ids ) > 0 ) :
 		?>
 		<div class="wpcm-form-images-current">
 			<h3><?php _e( 'Current Images', 'wp-car-manager' ); ?></h3>
