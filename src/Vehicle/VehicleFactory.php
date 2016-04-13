@@ -17,7 +17,7 @@ class VehicleFactory {
 	/**
 	 * Create Vehicle
 	 *
-	 * @param int $id
+	 * @param  int     $id
 	 *
 	 * @return Vehicle
 	 */
@@ -65,4 +65,5 @@ class VehicleFactory {
 
 		return $vehicle;
 	}
+
 }
