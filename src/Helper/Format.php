@@ -9,8 +9,8 @@ abstract class Format {
 	/**
 	 * Format price
 	 *
-	 * @param float $price
-	 * @param array $args
+	 * @param  float  $price
+	 * @param  array  $args
 	 *
 	 * @return string
 	 */
@@ -56,7 +56,7 @@ abstract class Format {
 	/**
 	 * Formats mileage
 	 *
-	 * @param $mileage
+	 * @param         $mileage
 	 *
 	 * @return string
 	 */
