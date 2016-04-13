@@ -16,7 +16,7 @@ class SubmitCarForm extends Shortcode {
 	}
 
 	/**
-	 * @param array $atts
+	 * @param  array  $atts
 	 *
 	 * @return string
 	 */
