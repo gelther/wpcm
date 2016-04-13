@@ -228,7 +228,7 @@ class Settings {
 	/**
 	 * Get option
 	 *
-	 * @param $key
+	 * @param             $key
 	 *
 	 * @return mixed|null
 	 */
