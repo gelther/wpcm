@@ -43,7 +43,7 @@ class Gallery extends MetaBox {
 	/**
 	 * Triggered on save_post
 	 *
-	 * @param int $post_id
+	 * @param int      $post_id
 	 * @param \WP_Post $post
 	 */
 	public function save_meta_box( $post_id, $post ) {
@@ -61,7 +61,6 @@ class Gallery extends MetaBox {
 			// save attachment id's as string
 			update_post_meta( $post_id, '_car_gallery', implode( ',', $attachment_ids ) );
 		}
-
 	}
 
 }
