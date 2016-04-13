@@ -8,7 +8,7 @@ class ViewManager {
 	private $container;
 
 	/**
-	 * @param  \Never5\WPCarManager\Pimple\Container $c
+	 * @param \Never5\WPCarManager\Pimple\Container $c
 	 */
 	public function __construct( $c ) {
 		$this->container = $c;
@@ -18,7 +18,7 @@ class ViewManager {
 	 * Display a view
 	 *
 	 * @param String $view
-	 * @param array $vars
+	 * @param array  $vars
 	 */
 	public function display( $view, $vars ) {
 
