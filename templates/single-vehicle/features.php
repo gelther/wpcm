@@ -17,4 +17,4 @@ if ( count( $features ) > 0 ) : ?>
 			<?php endforeach; ?>
 		</ul>
 	</div>
-<?php endif; ?>
+<?php endif;
