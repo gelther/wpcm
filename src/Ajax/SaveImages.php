@@ -122,7 +122,7 @@ class SaveImages extends Ajax {
 		if ( count( $gallery_ids ) > 0 ) {
 			update_post_meta( $vehicle_id, '_car_gallery', implode( ',', array_merge( $vehicle->get_gallery_attachment_ids(), $gallery_ids ) ) );
 		}
-		
+
 		// done
 		wp_send_json( array( 'success' => true ) );
 
